@@ -1,0 +1,6 @@
+dependencies {
+    compile project(':common')
+
+    compile group: 'org.jboss.resteasy', name: 'resteasy-guice', version: '4.5.8.Final'
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jackson2-provider', version: '4.5.8.Final'
+}

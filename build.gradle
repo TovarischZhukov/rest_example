@@ -1,0 +1,32 @@
+version '1.0-SNAPSHOT'
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    ext {
+        jettyVersion = "9.4.33.v20201020"
+    }
+
+    dependencies {
+        compile group: 'org.eclipse.jetty', name: 'jetty-server', version: jettyVersion
+        compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: jettyVersion
+
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.1'
+
+        compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+        compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: '4.2.2'
+
+        compile group: 'org.glassfish.hk2', name: 'guice-bridge', version: '2.6.0'
+
+        compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    }
+}
