@@ -1,9 +1,13 @@
+ext{
+  jerseyVersion = "2.32"
+}
+
 dependencies {
   compile project(':common')
 
-  compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.32'
-  compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.32'
-  compile group: 'org.glassfish.jersey.media', name: 'jersey-media-jaxb', version: '2.32'
-  compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.32'
-  compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: '2.32'
+  compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: jerseyVersion
+  compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: jerseyVersion
+  compile group: 'org.glassfish.jersey.media', name: 'jersey-media-jaxb', version: jerseyVersion
+  compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: jerseyVersion
+  compile group: 'org.glassfish.jersey.media', name: 'jersey-media-multipart', version: jerseyVersion
 }
