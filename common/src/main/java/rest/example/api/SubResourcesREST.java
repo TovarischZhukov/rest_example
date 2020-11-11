@@ -8,14 +8,32 @@ import javax.ws.rs.Path;
 public final class SubResourcesREST {
 
   @GET
-  @Path("/first")
-  public String first() {
-    return "Hello first!";
+  public String root() {
+    return "Hello first root!";
   }
 
   @GET
+  @Path("/path1")
+  public String first() {
+    return "Hello first path1!";
+  }
+
   @Path("/second")
-  public String second() {
-    return "Hello second!";
+  public SecondResource second() {
+    return new SecondResource();
+  }
+
+  public static final class SecondResource {
+
+    @GET
+    public String root() {
+      return "Hello second root!";
+    }
+
+    @GET
+    @Path("/path1")
+    public String first() {
+      return "Hello second path1!";
+    }
   }
 }

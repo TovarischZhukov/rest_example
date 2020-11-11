@@ -1,4 +1,4 @@
-package rest.example.json;
+package rest.example;
 
 
 import com.fasterxml.jackson.annotation.JsonCreator;

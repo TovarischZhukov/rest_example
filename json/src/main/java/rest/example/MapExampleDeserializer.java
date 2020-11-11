@@ -1,4 +1,4 @@
-package rest.example.json;
+package rest.example;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 
 @SuppressWarnings("NotNullNullableValidation")
 public final class MapExampleDeserializer extends StdDeserializer<MapExample> {
-  protected MapExampleDeserializer() {
+  public MapExampleDeserializer() {
     super(MapExample.class);
   }
 

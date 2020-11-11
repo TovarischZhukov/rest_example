@@ -18,6 +18,7 @@ public final class GuiceListener extends GuiceResteasyBootstrapServletContextLis
     return Collections.singletonList(new GuiceModule());
   }
 
+  @SuppressWarnings("rawtypes")
   private static final class GuiceModule extends AbstractModule {
     @SuppressWarnings("PointlessBinding")
     @Override

@@ -2,4 +2,5 @@ rootProject.name = 'rest_example'
 include 'common'
 include 'resteasy'
 include 'jersey'
+include 'json'
 
